@@ -186,6 +186,22 @@
 }
 
 @media print {
+  body.printing-plan * {
+    visibility: hidden;
+  }
+  body.printing-plan .plan-doc,
+  body.printing-plan .plan-doc * {
+    visibility: visible;
+  }
+  body.printing-plan .plan-doc {
+    position: absolute;
+    inset: 0 auto auto 0;
+    width: 100%;
+    padding: 0;
+  }
+  .studio-locked .plan-doc {
+    display: none;
+  }
   header,
   footer,
   .no-print {

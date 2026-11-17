@@ -33,8 +33,7 @@ export default function PrivacyPage() {
           to contact us.
         </li>
         <li>
-          <strong>Purchase information</strong> — when resource sales launch, payments will be processed by a third-party
-          payment provider. We will not receive or store your full card details.
+          <strong>Purchase information</strong> — payments are processed by Stripe on its own secure page. We never receive your card details. We keep only the Stripe customer and subscription identifiers needed to give you access, in a signed cookie on your device.
         </li>
         <li>
           <strong>Basic technical data</strong> — standard server logs (such as IP address and browser type) maintained by
@@ -43,6 +42,8 @@ export default function PrivacyPage() {
       </ul>
       <h2 id="not-collected">What we deliberately don&apos;t collect</h2>
       <p>
+        Parenting Plan Studio runs entirely in your browser. Anything you enter is saved only on your device (and only if you leave saving on), and is never sent to us.{" "}
+        
         Our interactive tools — <em>Find Your Starting Point</em> and <em>Relevant or Not?</em> — run entirely in your
         browser. Your selections are not sent to us or stored. We do not ask for names or ages of children, allegations,
         court file numbers or other private family information, and we ask you not to send them.

@@ -59,7 +59,7 @@ export default async function ProductPage({ params }: Props) {
                 </div>
               </dl>
               <div className="mt-6">
-                <CheckoutButton slug={product.slug} price={product.priceCad} title={product.title} />
+                <CheckoutButton item={product.slug} label={`Buy — ${formatCad(product.priceCad)} CAD`} title={product.title} />
               </div>
 
               <div className="mt-12 grid gap-10 sm:grid-cols-2">

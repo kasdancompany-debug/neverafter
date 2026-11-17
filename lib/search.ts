@@ -37,6 +37,13 @@ export function buildSearchIndex(): SearchItem[] {
       terms: "start begin guide pathway where to start",
     },
     {
+      title: "Parenting Plan Studio",
+      href: "/parenting-plan-studio",
+      kind: "Tool",
+      description: "Build a parenting plan draft: schedule, holidays, decisions, communication.",
+      terms: "parenting plan schedule template 2-2-3 week on week off holidays custody calendar",
+    },
+    {
       title: "Relevant or not?",
       href: "/relevant-or-not",
       kind: "Tool",
@@ -50,6 +57,7 @@ export function buildSearchIndex(): SearchItem[] {
       description: p.tagline,
       terms: p.objectives.join(" "),
     })),
+    { title: "Pricing", href: "/pricing", kind: "Page", description: "Free, Parenting Plan Studio and Never After Plus.", terms: "price cost buy plus subscription" },
     { title: "About Never After", href: "/about", kind: "Page", description: "Mission, philosophy and approach.", terms: "mission who we are" },
     { title: "Editorial standards", href: "/editorial-standards", kind: "Page", description: "How we research, review and correct.", terms: "sources corrections review" },
     { title: "Legal disclaimer", href: "/legal-disclaimer", kind: "Page", description: "Information, not advice.", terms: "disclaimer advice lawyer" },

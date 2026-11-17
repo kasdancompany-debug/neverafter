@@ -42,10 +42,12 @@ export const footerNav: { heading: string; links: NavItem[] }[] = [
   {
     heading: "Tools",
     links: [
-      { label: "Find Your Starting Point", href: "/start-here#starting-point" },
+      { label: "Parenting Plan Studio", href: "/parenting-plan-studio" },
+      { label: "Find Your Starting Point", href: "/start-here" },
       { label: "Relevant or Not?", href: "/relevant-or-not" },
       { label: "Articles", href: "/articles" },
       { label: "Resources", href: "/resources" },
+      { label: "Pricing", href: "/pricing" },
       { label: "Newsletter", href: "/#newsletter" },
     ],
   },
@@ -54,6 +56,8 @@ export const footerNav: { heading: string; links: NavItem[] }[] = [
     links: [
       { label: "About Never After", href: "/about" },
       { label: "Editorial Standards", href: "/editorial-standards" },
+      { label: "For Professionals", href: "/partners" },
+      { label: "Your Access", href: "/access" },
       { label: "Contact", href: "/contact" },
       { label: "Legal Disclaimer", href: "/legal-disclaimer" },
       { label: "Privacy Policy", href: "/privacy" },

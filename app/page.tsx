@@ -7,6 +7,7 @@ import { SignupForm } from "@/components/SignupForm";
 import { NewsletterBand } from "@/components/NewsletterBand";
 import { ProductCover } from "@/components/ProductCover";
 import { EditorialStandards } from "@/components/EditorialStandards";
+import { StudioPromo } from "@/components/StudioPromo";
 import { topics } from "@/lib/topics";
 import { pathways } from "@/lib/tools";
 import { getAllArticles, getFeaturedArticles, toSummary } from "@/lib/content";
@@ -174,6 +175,13 @@ export default function HomePage() {
           <div className="mt-10">
             <TopicGrid items={topics} counts={counts} />
           </div>
+        </div>
+      </section>
+
+      {/* STUDIO */}
+      <section aria-label="Parenting Plan Studio" className="border-t border-line bg-ivory py-16 sm:py-20">
+        <div className="container-x">
+          <StudioPromo />
         </div>
       </section>
 

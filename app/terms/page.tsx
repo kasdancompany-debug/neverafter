@@ -13,7 +13,7 @@ export default function TermsPage() {
     <LegalDoc
       crumb="Terms of Use"
       title="Terms of use"
-      sections={[{"id":"purpose","label":"Educational purpose"},{"id":"use","label":"Acceptable use"},{"id":"ip","label":"Intellectual property"},{"id":"purchases","label":"Purchases"},{"id":"links","label":"External links"},{"id":"liability","label":"Limitation of liability"},{"id":"law","label":"Governing law"},{"id":"changes","label":"Changes"}]}
+      sections={[{"id":"purpose","label":"Educational purpose"},{"id":"use","label":"Acceptable use"},{"id":"ip","label":"Intellectual property"},{"id":"purchases","label":"Purchases, subscriptions and refunds"},{"id":"links","label":"External links"},{"id":"liability","label":"Limitation of liability"},{"id":"law","label":"Governing law"},{"id":"changes","label":"Changes"}]}
       updated="November 17, 2026"
       intro={<p>By using the Never After website, you agree to these terms. Please read them alongside our Legal Disclaimer and Privacy Policy.</p>}
     >
@@ -33,11 +33,21 @@ export default function TermsPage() {
         Content, design, and branding on this site belong to Never After or its licensors. You may share links and short
         quotations with attribution. Purchased resources are licensed for personal, non-commercial use.
       </p>
-      <h2 id="purchases">4. Purchases</h2>
+      <h2 id="purchases">4. Purchases, subscriptions and refunds</h2>
       <p>
-        Digital resources are currently in development and not yet available for sale. When sales launch, prices will be
-        shown in Canadian dollars, payments will be processed by a third-party provider, and a refund policy will be
-        published here.
+        Prices are shown in Canadian dollars. Payments are processed by Stripe; we do not receive or store card details.
+        Parenting Plan Studio is a one-time purchase that unlocks export features in the browser where it was purchased,
+        and on other devices through your private restore link. Never After Plus renews automatically each month or year
+        until cancelled; you keep access until the end of the paid period. Guides still in development cannot be
+        purchased.
+      </p>
+      <p>
+        If something isn&apos;t right, contact us within 14 days of purchase and we will make it right, including a
+        refund where appropriate. Nothing in these terms limits rights you have under Ontario consumer protection law.
+      </p>
+      <p>
+        Parenting Plan Studio is an educational organizing tool. It does not draft legal documents, give legal advice, or
+        create a binding agreement. Have any plan reviewed by a lawyer licensed in Ontario before relying on it.
       </p>
       <h2 id="links">5. External links</h2>
       <p>

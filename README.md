@@ -28,13 +28,37 @@ Copy `.env.example` to `.env.local` and set:
 | `NEXT_PUBLIC_SITE_URL` | Canonical URLs, sitemap, Open Graph | Defaults to `https://www.neverafter.ca` (placeholder domain — confirm) |
 | `NEWSLETTER_WEBHOOK_URL` | Newsletter + Starter Guide signups (JSON POST) | Forms show **"Demo mode — not subscribed"**; nothing is stored |
 | `CONTACT_WEBHOOK_URL` | Contact form delivery (JSON POST) | Form shows **"Demo mode — message not sent"** |
-| `STRIPE_SECRET_KEY` | Stripe Checkout sessions | Purchase shows **"No purchase was made"** |
+| `STRIPE_SECRET_KEY` | Card payments via Stripe Checkout | Buy buttons say **"No payment was taken — not configured"** |
+| `ACCESS_TOKEN_SECRET` | Signs buyers' access passes (32+ random chars, never change after launch) | Checkout stays off |
+| `STRIPE_WEBHOOK_SECRET` | Verifies Stripe webhooks (optional) | Webhook returns 503 |
+| `STRIPE_AUTOMATIC_TAX` | `true` once Stripe Tax is set up | No tax added |
+
+## Taking payments (about 10 minutes)
+
+1. Create a Stripe account at stripe.com (Canadian business; it asks for bank details for payouts).
+2. In **Developers → API keys**, copy the **secret key**. Start with the test key (`sk_test_…`).
+3. Generate an access secret: `node -e "console.log(require('crypto').randomBytes(32).toString('hex'))"`.
+4. Set `STRIPE_SECRET_KEY` and `ACCESS_TOKEN_SECRET` in Vercel (or `.env.local`) and redeploy.
+5. Test with card `4242 4242 4242 4242`, any future date, any CVC. Then switch to the live key.
+6. In **Settings → Billing → Customer portal**, enable the portal so Plus members can update cards and cancel.
+7. Optional: add a webhook endpoint `https://<domain>/api/stripe/webhook` and set `STRIPE_WEBHOOK_SECRET`; enable Stripe Tax and set `STRIPE_AUTOMATIC_TAX=true` once you are registered for GST/HST.
+
+How it works: buyers pay on Stripe's hosted page (no card data touches this site). Stripe redirects to `/api/checkout/complete`, which **re-fetches the session from Stripe** and only then sets a signed, httpOnly access cookie. Buyers get a private restore link for other devices; `/access` lets them manage billing in Stripe's portal. No accounts or database needed. Products and prices live in `lib/catalog.ts`.
+
+## Revenue streams built in
+
+| Stream | Price (editable in `lib/catalog.ts`) | Status |
+|---|---|---|
+| Parenting Plan Studio — export unlock | $49 one-time | Live once Stripe keys are set |
+| Never After Plus | $12/month or $99/year | Live once Stripe keys are set |
+| Digital guides (5) | $29–$79 one-time | Turn on per guide with `available: true` in `lib/products.ts` once the PDF exists |
+| Professional listings, sponsorships, licensing, workshops | Quote-based | `/partners` → enquiry form |
+| Promo codes | — | Create in Stripe → Products → Coupons; checkout accepts them |
 
 ## Integration points (what needs external configuration)
 
 - **Email provider** — `app/api/subscribe/route.ts`. Forwards `{ email, list, consent, consentText, timestamp }` to a webhook. Point it at Buttondown/ConvertKit/Mailchimp (directly or via Zapier/Make). Use double opt-in (CASL). The Starter Guide PDF itself still needs to be written and attached to the provider's welcome email.
 - **Contact** — `app/api/contact/route.ts`, same pattern.
-- **Payments** — `app/api/checkout/route.ts` creates a Stripe Checkout Session via the REST API (no SDK). Checkout only proceeds when `STRIPE_SECRET_KEY` is set **and** the product has `available: true` in `lib/products.ts`. Still to build before selling: a Stripe webhook (`checkout.session.completed`) that delivers the file, a refund policy, and Stripe Tax configuration.
 - **CMS** — all article/topic data lives in `lib/articles.ts` and `lib/topics.ts`, and pages read it only through `lib/content.ts`. Replace those helpers with CMS queries (Sanity, Contentful, Payload…) — the body is already a portable block array.
 
 ## Structure
@@ -69,6 +93,7 @@ All articles are labelled **"Editorial draft"** (`legalReview: "pending"`) until
 3. **Interactive tools** (`lib/tools.ts`) — every scenario's "issue / why it matters / misunderstanding" text, and the offer-to-settle cost consequences statement.
 4. **Legal pages** — Legal Disclaimer, Privacy Policy (PIPEDA/CASL, service-provider list, privacy contact), Terms of Use (refunds, liability). Each carries a visible draft banner.
 5. **Products** — descriptions and preview excerpts are drafts; none of the products exist yet.
-6. **Placeholders to confirm** — domain (`neverafter.ca`), `hello@neverafter.ca` contact inbox (not displayed), reviewer panel (shown as open positions; no identities invented).
+6. **Monetization** — (a) confirm Parenting Plan Studio stays on the education/self-help side of the Law Society of Ontario's rules on providing legal services (it organizes the user's own choices; it does not advise or draft for them); (b) confirm the professional directory model complies with Law Society rules on referral fees and lawyer advertising (it is flat-fee, labelled advertising, no per-client payments); (c) finalize the 14-day refund wording and Ontario Consumer Protection Act obligations for online/subscription sales; (d) register for GST/HST once revenue passes the small-supplier threshold, then enable Stripe Tax.
+7. **Placeholders to confirm** — domain (`neverafter.ca`), `hello@neverafter.ca` contact inbox (not displayed), reviewer panel (shown as open positions; no identities invented).
 
 Official URLs were checked on 2026-11-17; `lso.ca` blocks automated checks and should be verified by hand.

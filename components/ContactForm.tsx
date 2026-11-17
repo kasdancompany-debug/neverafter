@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, type FormEvent } from "react";
+import { useEffect, useState, type FormEvent } from "react";
 import { AlertCircle, Info, Loader2, Send } from "lucide-react";
 
 type Fields = { name: string; email: string; topic: string; message: string };
@@ -25,6 +25,13 @@ function validate(f: Fields): Errors {
 
 export function ContactForm() {
   const [fields, setFields] = useState<Fields>({ name: "", email: "", topic: "", message: "" });
+
+  // Allow links like /contact?topic=partnership to preselect the topic.
+  useEffect(() => {
+    const t = new URLSearchParams(location.search).get("topic");
+    const map: Record<string, string> = { partnership: topics[2], correction: topics[1], resources: topics[3] };
+    if (t && map[t]) setFields((f) => ({ ...f, topic: map[t] }));
+  }, []);
   const [errors, setErrors] = useState<Errors>({});
   const [status, setStatus] = useState<
     { kind: "idle" | "submitting" } | { kind: "demo" | "success" | "error"; message: string }

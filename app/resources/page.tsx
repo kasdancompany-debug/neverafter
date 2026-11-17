@@ -7,6 +7,7 @@ import { SourceList } from "@/components/SourceList";
 import { NewsletterBand } from "@/components/NewsletterBand";
 import { formatCad, products } from "@/lib/products";
 import { resolveSources } from "@/lib/content";
+import { StudioPromo } from "@/components/StudioPromo";
 
 export const metadata: Metadata = {
   title: "Resources — Guides & Toolkits for Ontario Separation",
@@ -35,10 +36,16 @@ export default function ResourcesPage() {
         </p>
       </PageHeader>
 
+      <section aria-label="Parenting Plan Studio" className="border-b border-line bg-ivory py-14 sm:py-16">
+        <div className="container-x">
+          <StudioPromo compact />
+        </div>
+      </section>
+
       <section aria-labelledby="shop" className="py-14 sm:py-16">
         <div className="container-x">
-          <h2 id="shop" className="sr-only">
-            All resources
+          <h2 id="shop" className="hd-2 mb-8">
+            Guides and toolkits — coming soon
           </h2>
           <ul className="grid gap-x-8 gap-y-14 sm:grid-cols-2 lg:grid-cols-3">
             {products.map((p) => (
