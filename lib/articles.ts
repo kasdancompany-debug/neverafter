@@ -1,5 +1,6 @@
 import type { SourceKey } from "./site";
 import type { TopicSlug } from "./topics";
+import { moreArticles } from "./articles-more";
 
 /**
  * Article content model.
@@ -31,11 +32,13 @@ export type Article = {
   sections: ArticleSection[];
   sources: SourceKey[];
   related?: string[];
+  /** Short Q&A pairs rendered as "Quick answers" and as FAQPage structured data. */
+  faqs?: { q: string; a: string }[];
 };
 
 const EDITORIAL = "Never After Editorial Team";
 
-export const articles: Article[] = [
+const coreArticles: Article[] = [
   {
     slug: "is-50-50-parenting-time-automatic-in-ontario",
     title: "Is 50/50 Parenting Time Automatic in Ontario?",
@@ -696,6 +699,8 @@ export const articles: Article[] = [
     ],
   },
 ];
+
+export const articles: Article[] = [...coreArticles, ...moreArticles];
 
 export const featuredArticleSlugs = [
   "is-50-50-parenting-time-automatic-in-ontario",

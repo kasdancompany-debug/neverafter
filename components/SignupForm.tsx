@@ -21,6 +21,7 @@ export function SignupForm({ list, cta = "Subscribe" }: { list: "newsletter" | "
   const id = useId();
   const [email, setEmail] = useState("");
   const [consent, setConsent] = useState(false);
+  const [company, setCompany] = useState(""); // honeypot — hidden from people, filled by bots
   const [submitted, setSubmitted] = useState(false);
   const [status, setStatus] = useState<Status>({ kind: "idle" });
 
@@ -47,7 +48,7 @@ export function SignupForm({ list, cta = "Subscribe" }: { list: "newsletter" | "
       const res = await fetch("/api/subscribe", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ email: email.trim(), list, consent, consentText }),
+        body: JSON.stringify({ email: email.trim(), list, consent, consentText, company }),
       });
       const data = (await res.json().catch(() => ({}))) as { message?: string; demo?: boolean };
       if (data.demo) setStatus({ kind: "demo", message: data.message ?? "Demo mode." });
@@ -63,7 +64,13 @@ export function SignupForm({ list, cta = "Subscribe" }: { list: "newsletter" | "
   }
 
   return (
-    <form onSubmit={onSubmit} noValidate className="w-full">
+    <form onSubmit={onSubmit} noValidate className="relative w-full">
+      <div aria-hidden="true" className="absolute -left-[9999px] h-px w-px overflow-hidden">
+        <label>
+          Company
+          <input tabIndex={-1} autoComplete="off" value={company} onChange={(e) => setCompany(e.target.value)} />
+        </label>
+      </div>
       <label htmlFor={`${id}-email`} className="text-[0.85rem] font-semibold text-navy">
         Email address
       </label>

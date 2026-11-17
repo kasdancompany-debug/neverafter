@@ -26,12 +26,23 @@ Copy `.env.example` to `.env.local` and set:
 | Variable | Purpose | If unset |
 |---|---|---|
 | `NEXT_PUBLIC_SITE_URL` | Canonical URLs, sitemap, Open Graph | Defaults to `https://www.neverafter.ca` (placeholder domain — confirm) |
-| `NEWSLETTER_WEBHOOK_URL` | Newsletter + Starter Guide signups (JSON POST) | Forms show **"Demo mode — not subscribed"**; nothing is stored |
+| `RESEND_API_KEY`, `NEWSLETTER_FROM` | Newsletter via Resend (double opt-in) | Forms show **"Demo mode — not subscribed"**; nothing is stored |
+| `NEWSLETTER_POSTAL_ADDRESS` | Your mailing address in email footers (required by CASL) | Omitted from footer |
 | `CONTACT_WEBHOOK_URL` | Contact form delivery (JSON POST) | Form shows **"Demo mode — message not sent"** |
 | `STRIPE_SECRET_KEY` | Card payments via Stripe Checkout | Buy buttons say **"No payment was taken — not configured"** |
 | `ACCESS_TOKEN_SECRET` | Signs buyers' access passes (32+ random chars, never change after launch) | Checkout stays off |
 | `STRIPE_WEBHOOK_SECRET` | Verifies Stripe webhooks (optional) | Webhook returns 503 |
 | `STRIPE_AUTOMATIC_TAX` | `true` once Stripe Tax is set up | No tax added |
+
+## Newsletter (Resend, about 10 minutes)
+
+1. Create a free account at resend.com.
+2. **Domains → Add domain**, add the DNS records it shows at your domain registrar, and wait for "Verified".
+3. **API Keys → Create** (full access, or sending + contacts). Set `RESEND_API_KEY` and `NEWSLETTER_FROM` (e.g. `Never After <brief@yourdomain.ca>`), plus `NEWSLETTER_POSTAL_ADDRESS`. Redeploy.
+4. Sign up on your own site, click the confirmation email, and check you appear under **Audience → Contacts**.
+5. Send issues from **Broadcasts** in Resend. Every broadcast gets an automatic unsubscribe link.
+
+Flow: signup → signed confirmation email (nothing stored) → click → contact created in Resend → welcome email with the Starter Guide. Confirmation links expire after 7 days. A hidden honeypot field filters basic bots.
 
 ## Taking payments (about 10 minutes)
 
@@ -57,7 +68,6 @@ How it works: buyers pay on Stripe's hosted page (no card data touches this site
 
 ## Integration points (what needs external configuration)
 
-- **Email provider** — `app/api/subscribe/route.ts`. Forwards `{ email, list, consent, consentText, timestamp }` to a webhook. Point it at Buttondown/ConvertKit/Mailchimp (directly or via Zapier/Make). Use double opt-in (CASL). The Starter Guide PDF itself still needs to be written and attached to the provider's welcome email.
 - **Contact** — `app/api/contact/route.ts`, same pattern.
 - **CMS** — all article/topic data lives in `lib/articles.ts` and `lib/topics.ts`, and pages read it only through `lib/content.ts`. Replace those helpers with CMS queries (Sanity, Contentful, Payload…) — the body is already a portable block array.
 

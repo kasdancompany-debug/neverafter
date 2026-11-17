@@ -60,9 +60,9 @@ export default function PrivacyPage() {
       </p>
       <h2 id="providers">Service providers</h2>
       <p>
-        We may use trusted service providers for hosting, email delivery and payments. Some may store data outside
-        Canada. Where that happens, information may be subject to the laws of those jurisdictions. A current list of
-        providers will be published here before launch.
+        We use trusted service providers: Vercel (hosting), Resend (newsletter email delivery and subscriber list) and Stripe
+        (payments). Some store data outside Canada, where it may be subject to the laws of those jurisdictions. Newsletter
+        signups use double opt-in: your address is only added to our list after you click the confirmation link.
       </p>
       <h2 id="rights">Your choices and rights</h2>
       <p>

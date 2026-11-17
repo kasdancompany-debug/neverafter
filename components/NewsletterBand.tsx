@@ -9,7 +9,7 @@ export function NewsletterBand({ id = "newsletter" }: { id?: string }) {
             The Never After Brief
           </h2>
           <p className="mt-3 text-[1.1rem] text-navy">Clear explanations. Useful resources. Less noise.</p>
-          <p className="mt-1 text-[0.95rem] text-muted">Weekly educational insights about separation, parenting and Ontario family law.</p>
+          <p className="mt-1 text-[0.95rem] text-muted">Weekly educational insights about separation, parenting and Ontario family law. New subscribers get the free Starter Guide.</p>
         </div>
         <SignupForm list="newsletter" cta="Subscribe" />
       </div>

@@ -10,6 +10,7 @@ import { JsonLd } from "@/components/JsonLd";
 import { OnThisPage } from "@/components/OnThisPage";
 import { ReadingProgress } from "@/components/ReadingProgress";
 import { ArticleTools } from "@/components/ArticleTools";
+import { Faq } from "@/components/Faq";
 import type { Block } from "@/lib/articles";
 import {
   categoryHref,
@@ -88,6 +89,7 @@ export default async function ArticlePage({ params }: Props) {
   const toc = [
     { id: "key-takeaways", label: "Key takeaways" },
     ...article.sections.map((s) => ({ id: s.id, label: s.heading })),
+    ...(article.faqs?.length ? [{ id: "quick-answers", label: "Quick answers" }] : []),
     { id: "sources", label: "Sources" },
   ];
 
@@ -110,6 +112,15 @@ export default async function ArticlePage({ params }: Props) {
           isAccessibleForFree: true,
         }}
       />
+      {article.faqs?.length ? (
+        <JsonLd
+          data={{
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            mainEntity: article.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+          }}
+        />
+      ) : null}
       <ReadingProgress targetId="article-body" />
 
       <article>
@@ -183,6 +194,17 @@ export default async function ArticlePage({ params }: Props) {
                 </section>
               ))}
             </div>
+
+            {article.faqs?.length ? (
+              <section id="quick-answers" aria-labelledby="quick-answers-h" className="mt-14 scroll-mt-24">
+                <h2 id="quick-answers-h" className="hd-2">
+                  Quick answers
+                </h2>
+                <div className="mt-5">
+                  <Faq items={article.faqs} />
+                </div>
+              </section>
+            ) : null}
 
             <LegalNote className="mt-12" />
 
