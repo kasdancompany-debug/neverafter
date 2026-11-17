@@ -15,7 +15,7 @@ export function Logo({ tone = "dark" }: { tone?: "dark" | "light" }) {
     <Link
       href="/"
       aria-label="Never After — home"
-      className={`inline-flex items-center gap-2 ${tone === "dark" ? "text-navy" : "text-paper"}`}
+      className={`inline-flex items-center gap-2 whitespace-nowrap ${tone === "dark" ? "text-navy" : "text-paper"}`}
     >
       <LogoMark className="h-6 w-6" />
       <span className="text-[0.95rem] font-semibold tracking-[0.16em]">NEVER AFTER</span>

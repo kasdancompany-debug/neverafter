@@ -83,24 +83,26 @@ export function Header({ searchIndex }: { searchIndex: SearchItem[] }) {
           scrolled || menuOpen ? "shadow-[0_1px_0_var(--color-line)]" : ""
         }`}
       >
-        <div className="mx-auto flex h-16 max-w-[1320px] items-center gap-6 px-5 sm:px-8">
-          <Logo />
+        <div className="container-x flex h-16 items-center">
+          <div className="shrink-0">
+            <Logo />
+          </div>
 
-          <nav aria-label="Primary" className="ml-4 hidden xl:block">
-            <ul className="flex items-center">
+          <nav aria-label="Primary" className="ml-10 hidden h-full xl:block">
+            <ul className="flex h-full items-center gap-6">
               {mainNav.map((item) => {
                 const active = isActive(pathname, item.href);
                 return (
-                  <li key={item.href}>
+                  <li key={item.href} className="h-full">
                     <Link
                       href={item.href}
                       aria-current={active ? "page" : undefined}
-                      className={`relative flex h-16 items-center px-2.5 text-[0.85rem] font-medium transition-colors ${
+                      className={`relative flex h-full items-center whitespace-nowrap text-[0.85rem] font-medium transition-colors ${
                         active ? "text-navy" : "text-charcoal/65 hover:text-navy"
                       }`}
                     >
                       {item.label}
-                      {active && <span className="absolute inset-x-2.5 bottom-0 h-[2px] bg-navy" aria-hidden />}
+                      {active && <span className="absolute inset-x-0 bottom-0 h-[2px] bg-navy" aria-hidden />}
                     </Link>
                   </li>
                 );
@@ -108,19 +110,16 @@ export function Header({ searchIndex }: { searchIndex: SearchItem[] }) {
             </ul>
           </nav>
 
-          <div className="ml-auto flex items-center gap-2">
+          <div className="ml-auto flex shrink-0 items-center gap-2 pl-6">
             <button
               type="button"
               onClick={() => setSearchOpen(true)}
-              className="flex h-9 items-center gap-2 rounded-[3px] border border-line px-2.5 text-[0.85rem] text-muted transition-colors hover:border-line-strong hover:text-navy"
+              className="flex h-9 w-9 items-center justify-center rounded-[3px] text-charcoal/70 transition-colors hover:bg-ivory hover:text-navy"
               aria-label="Search"
+              title={`Search (${isMac ? "⌘K" : "Ctrl+K"})`}
               aria-keyshortcuts="Meta+K Control+K /"
             >
-              <Search className="h-4 w-4" aria-hidden />
-              <span className="hidden 2xl:inline">Search</span>
-              <kbd className="hidden rounded-[3px] border border-line bg-ivory px-1.5 text-[0.7rem] font-medium 2xl:inline">
-                {isMac ? "⌘K" : "Ctrl K"}
-              </kbd>
+              <Search className="h-[18px] w-[18px]" aria-hidden />
             </button>
             <Link href="/start-here" className="btn-primary hidden !h-9 !px-4 !text-[0.84rem] sm:inline-flex">
               Find Your Starting Point
