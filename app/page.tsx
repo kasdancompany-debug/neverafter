@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 import { WhatMatters } from "@/components/WhatMatters";
 import { TopicGrid } from "@/components/TopicCard";
 import { ArticleCard, ArticleRow } from "@/components/ArticleCard";
-import { SignupForm } from "@/components/SignupForm";
+import { GuideDownload } from "@/components/GuideDownload";
 import { NewsletterBand } from "@/components/NewsletterBand";
 import { ProductCover } from "@/components/ProductCover";
 import { EditorialStandards } from "@/components/EditorialStandards";
@@ -212,13 +212,25 @@ export default function HomePage() {
               A clearer way forward starts here.
             </h2>
             <p className="mt-4 leading-relaxed text-charcoal/80">
-              <strong className="font-semibold text-navy">The Ontario Separation Starter Guide</strong> is a structured
-              introduction to the terms, laws and practical questions that usually come first: separation vs. divorce,
-              federal vs. Ontario law, the four core issues, and questions to bring to a first consultation.
+              <strong className="font-semibold text-navy">The Ontario Separation Starter Guide</strong> — 16 printable pages
+              on what to understand first.
             </p>
-            <div className="mt-7">
-              <SignupForm list="starter-guide" cta="Send me the guide" />
-            </div>
+            <ul className="mt-4 grid gap-x-6 gap-y-1.5 text-[0.93rem] text-charcoal/85 sm:grid-cols-2">
+              {[
+                "Which law applies to you — a one-page map",
+                "The four core questions, explained",
+                "A first-30-days checklist",
+                "Documents-to-gather worksheet",
+                "Questions for a first consultation",
+                "Affordable legal help, glossary, official sources",
+              ].map((x) => (
+                <li key={x} className="flex gap-2.5">
+                  <span className="mt-[0.6em] h-1 w-1 shrink-0 bg-champagne-ink" aria-hidden />
+                  {x}
+                </li>
+              ))}
+            </ul>
+            <GuideDownload className="mt-7" />
           </div>
         </div>
       </section>

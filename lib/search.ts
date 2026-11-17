@@ -57,6 +57,7 @@ export function buildSearchIndex(): SearchItem[] {
       description: p.tagline,
       terms: p.objectives.join(" "),
     })),
+    { title: "Free Ontario Separation Starter Guide (PDF)", href: "/guides/ontario-separation-starter-guide.pdf", kind: "Resource", description: "16-page printable guide: which law applies, the four core issues, checklists and worksheets.", terms: "free download pdf starter guide checklist worksheet first steps documents" },
     { title: "Pricing", href: "/pricing", kind: "Page", description: "Free, Parenting Plan Studio and Never After Plus.", terms: "price cost buy plus subscription" },
     { title: "About Never After", href: "/about", kind: "Page", description: "Mission, philosophy and approach.", terms: "mission who we are" },
     { title: "Editorial standards", href: "/editorial-standards", kind: "Page", description: "How we research, review and correct.", terms: "sources corrections review" },

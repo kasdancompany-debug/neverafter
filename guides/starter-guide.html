@@ -1,0 +1,620 @@
+<!doctype html>
+<html lang="en-CA">
+<head>
+<meta charset="utf-8" />
+<title>The Ontario Separation Starter Guide — Never After</title>
+<meta name="author" content="Never After Editorial Team" />
+<meta name="description" content="A plain-English introduction to separation in Ontario: which laws apply, the four core issues, first steps, documents to gather and where to get help." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=block" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #182b30;
+    --ivory: #f5f1e9;
+    --champagne: #c4ac8a;
+    --champagne-ink: #7a6040;
+    --sage-ink: #46594d;
+    --charcoal: #252a2c;
+    --muted: #5e6669;
+    --line: #e3ddd1;
+    --line-strong: #cfc6b5;
+    --serif: "Newsreader", Georgia, serif;
+    --sans: "Instrument Sans", system-ui, sans-serif;
+  }
+
+  @page {
+    size: Letter;
+    margin: 0.85in 0.9in 0.9in;
+    @top-left {
+      content: "The Ontario Separation Starter Guide";
+      font: 500 7.5pt var(--sans);
+      color: #8a9194;
+      letter-spacing: 0.04em;
+      vertical-align: bottom;
+      padding-bottom: 10pt;
+    }
+    @top-right {
+      content: "NEVER AFTER";
+      font: 600 7pt var(--sans);
+      color: #8a9194;
+      letter-spacing: 0.18em;
+      vertical-align: bottom;
+      padding-bottom: 10pt;
+    }
+    @bottom-left {
+      content: "General legal information, not legal advice.";
+      font: 400 7.5pt var(--sans);
+      color: #8a9194;
+      vertical-align: top;
+      padding-top: 12pt;
+    }
+    @bottom-right {
+      content: counter(page);
+      font: 600 8pt var(--sans);
+      color: var(--navy);
+      vertical-align: top;
+      padding-top: 12pt;
+    }
+  }
+  @page cover {
+    margin: 0;
+    @top-left { content: none; }
+    @top-right { content: none; }
+    @bottom-left { content: none; }
+    @bottom-right { content: none; }
+  }
+  @page back {
+    margin: 0;
+    @top-left { content: none; }
+    @top-right { content: none; }
+    @bottom-left { content: none; }
+    @bottom-right { content: none; }
+  }
+
+  * { box-sizing: border-box; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body {
+    margin: 0;
+    font-family: var(--serif);
+    font-size: 10.6pt;
+    line-height: 1.55;
+    color: var(--charcoal);
+    font-optical-sizing: auto;
+    hyphens: auto;
+  }
+
+  /* ---------- Cover ---------- */
+  .cover {
+    page: cover;
+    height: 11in;
+    width: 8.5in;
+    background: var(--navy);
+    color: var(--ivory);
+    padding: 0.9in 0.9in 0.8in;
+    display: flex;
+    flex-direction: column;
+    break-after: page;
+    position: relative;
+  }
+  .cover .top { display: flex; justify-content: space-between; font: 600 8pt var(--sans); letter-spacing: 0.2em; opacity: 0.8; }
+  .cover .rule { height: 1px; background: rgba(245, 241, 233, 0.25); margin-top: 1.6in; }
+  .cover .kicker { margin-top: 0.35in; font: 600 9pt var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--champagne); }
+  .cover h1 { margin: 0.18in 0 0; font: 500 46pt/1.02 var(--serif); letter-spacing: -0.02em; }
+  .cover .sub { margin-top: 0.3in; max-width: 4.8in; font: 400 13pt/1.5 var(--serif); color: rgba(245, 241, 233, 0.82); }
+  .cover .mark { position: absolute; right: 0.9in; bottom: 2.1in; width: 2.6in; height: 2.6in; }
+  .cover .foot { margin-top: auto; display: flex; justify-content: space-between; align-items: flex-end; font: 400 8.5pt/1.5 var(--sans); color: rgba(245, 241, 233, 0.65); }
+  .cover .foot strong { color: var(--ivory); font-weight: 600; }
+
+  /* ---------- Typography ---------- */
+  h2.chapter {
+    break-before: page;
+    margin: 0 0 4pt;
+    font: 500 25pt/1.1 var(--serif);
+    letter-spacing: -0.015em;
+    color: var(--navy);
+  }
+  .chapter-label { font: 600 7.5pt var(--sans); letter-spacing: 0.14em; text-transform: uppercase; color: var(--champagne-ink); margin: 0 0 6pt; break-after: avoid; }
+  .standfirst { font: 400 12.5pt/1.5 var(--serif); color: #4b5356; margin: 8pt 0 16pt; padding-bottom: 14pt; border-bottom: 1px solid var(--line); }
+  h3 { font: 600 10.5pt/1.3 var(--sans); color: var(--navy); margin: 16pt 0 4pt; break-after: avoid; }
+  h4 { font: 600 9pt/1.3 var(--sans); color: var(--navy); margin: 10pt 0 2pt; break-after: avoid; }
+  p { margin: 0 0 7pt; orphans: 3; widows: 3; }
+  ul, ol { margin: 4pt 0 9pt; padding-left: 15pt; }
+  li { margin: 0 0 3pt; }
+  ul li::marker { color: var(--champagne); }
+  strong { font-weight: 500; color: var(--navy); }
+  em { font-style: italic; }
+  .sans { font-family: var(--sans); }
+  .small { font-size: 8.8pt; line-height: 1.5; }
+  .muted { color: var(--muted); }
+  a { color: var(--navy); text-decoration: none; }
+
+  /* ---------- Components ---------- */
+  .note {
+    border-left: 2px solid var(--champagne);
+    background: var(--ivory);
+    padding: 9pt 12pt;
+    margin: 12pt 0;
+    font: 400 9.2pt/1.5 var(--sans);
+    break-inside: avoid;
+  }
+  .note .t { display: block; font: 600 7.5pt var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--navy); margin-bottom: 3pt; }
+  .note.alert { border-left-color: var(--navy); }
+  .note.myth .t { color: var(--champagne-ink); }
+
+  .two { display: grid; grid-template-columns: 1fr 1fr; gap: 0 22pt; }
+  .card { border-top: 2px solid var(--navy); padding-top: 7pt; break-inside: avoid; }
+
+  table { width: 100%; border-collapse: collapse; margin: 10pt 0 12pt; font: 400 8.6pt/1.4 var(--sans); break-inside: avoid; }
+  th, td { text-align: left; vertical-align: top; padding: 6pt 7pt; border-bottom: 1px solid var(--line); }
+  thead th { font-weight: 600; color: var(--navy); border-bottom: 1.5px solid var(--navy); font-size: 8pt; }
+  tbody th { font-weight: 600; color: var(--navy); width: 20%; }
+  td small { color: var(--muted); display: block; margin-top: 2pt; }
+
+  .toc { list-style: none; padding: 0; margin: 18pt 0 0; font-family: var(--sans); }
+  .toc li { display: flex; align-items: baseline; gap: 8pt; padding: 7.5pt 0; border-bottom: 1px solid var(--line); margin: 0; }
+  .toc .n { width: 18pt; color: var(--champagne-ink); font-weight: 600; font-size: 9pt; }
+  .toc .t { flex: 1; font: 500 12pt var(--serif); color: var(--navy); }
+  .toc .d { font-size: 8.5pt; color: var(--muted); max-width: 2.6in; text-align: right; }
+
+  .check { list-style: none; padding: 0; margin: 4pt 0 6pt; font: 400 9pt/1.4 var(--sans); }
+  .check li { display: grid; grid-template-columns: 13pt 1fr; gap: 7pt; padding: 3.2pt 0; border-bottom: 1px solid var(--line); margin: 0; break-inside: avoid; }
+  .check li::before { content: ""; width: 9pt; height: 9pt; border: 1.2px solid var(--navy); border-radius: 1.5pt; margin-top: 2.5pt; }
+  .check li span.why { display: block; color: var(--muted); font-size: 8.2pt; }
+
+  .write { border-bottom: 1px solid var(--line-strong); height: 20pt; }
+  .qa { break-inside: avoid; margin-bottom: 8pt; }
+  .qa .q { font: 500 9.6pt/1.4 var(--sans); color: var(--navy); }
+
+  dl.gloss { margin: 8pt 0 0; columns: 2; column-gap: 22pt; }
+  dl.gloss div { break-inside: avoid; padding: 6pt 0; border-bottom: 1px solid var(--line); }
+  dl.gloss dt { font: 600 9pt var(--sans); color: var(--navy); }
+  dl.gloss dd { margin: 1pt 0 0; font-size: 9.4pt; line-height: 1.45; }
+
+  .src { list-style: none; padding: 0; font: 400 9pt/1.4 var(--sans); }
+  .src li { padding: 6pt 0; border-bottom: 1px solid var(--line); break-inside: avoid; }
+  .src .l { color: var(--navy); font-weight: 600; }
+  .src .u { color: var(--muted); font-size: 8.2pt; word-break: break-all; }
+
+  .steps { counter-reset: s; list-style: none; padding: 0; }
+  .steps > li { counter-increment: s; position: relative; padding: 0 0 8pt 26pt; margin: 0; break-inside: avoid; }
+  .steps > li::before { content: counter(s); position: absolute; left: 0; top: 1pt; width: 17pt; height: 17pt; border-radius: 50%; background: var(--navy); color: var(--ivory); font: 600 8pt/17pt var(--sans); text-align: center; }
+
+  .avoid { break-inside: avoid; }
+
+  /* ---------- Back cover ---------- */
+  .back {
+    page: back;
+    break-before: page;
+    height: 11in;
+    width: 8.5in;
+    background: var(--ivory);
+    padding: 1in 0.9in 0.8in;
+    display: flex;
+    flex-direction: column;
+    font-family: var(--sans);
+  }
+  .back h2 { font: 500 24pt/1.15 var(--serif); color: var(--navy); margin: 0; max-width: 5in; }
+  .back p { font-size: 9.5pt; line-height: 1.55; max-width: 5.2in; }
+  .back .bottom { margin-top: auto; border-top: 1px solid var(--line-strong); padding-top: 12pt; font-size: 8pt; color: var(--muted); line-height: 1.55; }
+</style>
+</head>
+<body>
+
+<!-- =============================== COVER =============================== -->
+<section class="cover">
+  <div class="top"><span>NEVER AFTER</span><span>ONTARIO · 2026 EDITION</span></div>
+  <div class="rule"></div>
+  <div class="kicker">Free guide</div>
+  <h1>The Ontario<br />Separation<br />Starter Guide</h1>
+  <p class="sub">What to understand first — the laws that apply, the four questions most separations involve, and practical first steps.</p>
+  <svg class="mark" viewBox="0 0 24 24" fill="none" stroke-linecap="round" aria-hidden="true">
+    <path d="M3 18 H 10 C 13 18, 14 10, 21 7" stroke="rgba(245,241,233,0.35)" stroke-width="0.35" />
+    <path d="M10 18 C 13 18, 15 15, 21 15" stroke="#C4AC8A" stroke-width="0.35" />
+  </svg>
+  <div class="foot">
+    <div><strong>The fairytale ends. Life doesn't.</strong><br />Divorce, separation &amp; family law — explained.</div>
+    <div style="text-align:right">neverafter.ca</div>
+  </div>
+</section>
+
+<!-- =============================== CONTENTS =============================== -->
+<section style="break-after:page">
+<p class="chapter-label" style="margin-top:0">Inside</p>
+<h2 class="chapter" style="break-before:avoid">Contents</h2>
+
+<ol class="toc">
+  <li><span class="n">1</span><span class="t">Separation and divorce</span><span class="d">What each means, and why the date matters</span></li>
+  <li><span class="n">2</span><span class="t">Which law applies to you</span><span class="d">A one-page map</span></li>
+  <li><span class="n">3</span><span class="t">The four core questions</span><span class="d">Children, child support, spousal support, property</span></li>
+  <li><span class="n">4</span><span class="t">How issues get resolved</span><span class="d">Agreement, mediation, arbitration, court</span></li>
+  <li><span class="n">5</span><span class="t">If you end up in court</span><span class="d">The usual steps</span></li>
+  <li><span class="n">6</span><span class="t">Getting legal help you can afford</span><span class="d">Options beyond full representation</span></li>
+  <li><span class="n">7</span><span class="t">Your first 30 days</span><span class="d">A practical checklist</span></li>
+  <li><span class="n">8</span><span class="t">Documents to gather</span><span class="d">Worksheet</span></li>
+  <li><span class="n">9</span><span class="t">Questions for a first consultation</span><span class="d">Worksheet</span></li>
+  <li><span class="n">10</span><span class="t">Glossary and official resources</span><span class="d">Plain-English terms; where to check</span></li>
+</ol>
+<p class="small muted" style="margin-top:18pt">Current to November 2026. Ontario, Canada. General legal information, not legal advice.</p>
+</section>
+
+<!-- =============================== INTRO =============================== -->
+<p class="chapter-label" style="margin-top:0">Before you begin</p>
+<h2 class="chapter" style="break-before:avoid">How to use this guide</h2>
+<p class="standfirst">Separation brings a lot of questions at once. This guide won't answer all of them — but it will help you see how the questions are organized, which ones apply to you, and what to do first.</p>
+
+<p>Most people come to family law at a hard moment, with little time and a lot of conflicting advice. The single most useful thing you can do early on is understand <strong>how the system is structured</strong>: which laws apply to your situation, which separate issues need to be resolved, and how those issues are usually resolved. That understanding makes every later conversation — with the other parent, a mediator or a lawyer — clearer, shorter and usually less expensive.</p>
+<p>Read it in order the first time. After that, the checklists in Sections 7 to 9 are designed to be printed and used.</p>
+
+<div class="note alert">
+  <span class="t">If you or a child are not safe</span>
+  Call <strong>911</strong> in an emergency. In Ontario, the <strong>Assaulted Women's Helpline</strong> offers free, confidential 24-hour support at <strong>1-866-863-0511</strong>. Children and young people can reach <strong>Kids Help Phone</strong> any time at <strong>1-800-668-6868</strong> or by texting 686868. If family violence is part of your situation, much of the general information in this guide may not fit — get legal advice and support as early as you can. Legal Aid Ontario may be able to help.
+</div>
+
+<div class="note">
+  <span class="t">Important: information, not advice</span>
+  Never After is an educational publisher, not a law firm. This guide gives general legal information about Ontario and Canadian family law as of November 2026. It is not legal advice, does not apply the law to your situation, and does not create a lawyer–client relationship. Laws and court rules change. For advice about your circumstances, consult a lawyer licensed in Ontario.
+</div>
+
+
+
+<!-- =============================== 1 =============================== -->
+<h2 class="chapter">1. Separation and divorce</h2>
+<p class="standfirst">Separation is a change in your relationship. Divorce is a court order that ends a marriage. Many people resolve everything that matters long before a divorce — or without one at all.</p>
+
+<div class="two">
+  <div class="card">
+    <h4>Separation</h4>
+    <p>You are generally considered separated when you live "separate and apart" and there is no reasonable prospect of getting back together. In some situations, people can be separated while still living under the same roof — for example, if they no longer share a bedroom, meals or a social life as a couple.</p>
+    <p>There is no government form to "register" a separation in Ontario. You don't need a lawyer or a court to be separated.</p>
+  </div>
+  <div class="card">
+    <h4>Divorce</h4>
+    <p>A divorce legally ends a marriage. It is granted by the Superior Court of Justice under the federal <em>Divorce Act</em>. Only married spouses divorce.</p>
+    <p>The most common ground is that the spouses have lived separate and apart for at least one year. A divorce generally takes effect 31 days after the order is made, and the court will want to see that reasonable arrangements have been made for child support.</p>
+  </div>
+</div>
+
+<h3>Why the date of separation matters</h3>
+<p>The date you separated can have real legal consequences, so it's worth writing down — along with what happened that day and anything that shows it (a message, a move, a change in finances). For married spouses, it is the <strong>valuation date</strong> used to divide the value of property under Ontario's <em>Family Law Act</em>. It can also affect time limits and support. If you and the other person disagree about the date, note that early and mention it to a lawyer.</p>
+
+<h3>If you weren't married</h3>
+<p>Unmarried partners don't divorce, but separation still has legal consequences. Parenting arrangements and child support apply in exactly the same way to children of unmarried parents. Spousal support can apply to some unmarried partners. Property is where the biggest differences arise — see the map in Section 2.</p>
+
+<div class="note myth">
+  <span class="t">Common misunderstanding</span>
+  "We have to wait a year before we can sort anything out." No. The one-year period relates to the most common ground for <em>divorce</em>. Parenting, support and property can be addressed — by agreement or, if necessary, in court — as soon as you separate.
+</div>
+
+<!-- =============================== 2 =============================== -->
+<h2 class="chapter">2. Which law applies to you</h2>
+<p class="standfirst">Canadian family law is split between federal and provincial law. Whether you were married — and whether a divorce is being sought — changes which statute applies to each issue.</p>
+
+<table>
+  <thead>
+    <tr><th style="width:20%">Issue</th><th>Married spouses</th><th>Unmarried partners</th></tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Divorce</th>
+      <td>Federal <em>Divorce Act</em>. Superior Court of Justice.</td>
+      <td>Not applicable.</td>
+    </tr>
+    <tr>
+      <th>Parenting</th>
+      <td><em>Divorce Act</em> if a divorce is claimed; otherwise Ontario's <em>Children's Law Reform Act</em>.</td>
+      <td>Ontario's <em>Children's Law Reform Act</em>.</td>
+    </tr>
+    <tr>
+      <th>Child support</th>
+      <td><em>Divorce Act</em> and the Federal Child Support Guidelines in a divorce; otherwise the <em>Family Law Act</em> and Ontario's Child Support Guidelines.</td>
+      <td>Ontario's <em>Family Law Act</em> and Child Support Guidelines. <small>The two sets of guidelines are very similar.</small></td>
+    </tr>
+    <tr>
+      <th>Spousal support</th>
+      <td><em>Divorce Act</em> in a divorce; otherwise the <em>Family Law Act</em>.</td>
+      <td><em>Family Law Act</em>, if you meet its definition of "spouse" — for example, you lived together for at least three years, or were in a relationship of some permanence and are the parents of a child.</td>
+    </tr>
+    <tr>
+      <th>Property</th>
+      <td><em>Family Law Act</em>: equalization of net family property, plus special rules for the matrimonial home.</td>
+      <td>No statutory equalization. Claims generally depend on who owns what, and on general legal principles (for example, claims for unjust enrichment). <small>Get advice if you contributed to property in your partner's name.</small></td>
+    </tr>
+  </tbody>
+</table>
+
+<h3>The modern words for "custody" and "access"</h3>
+<p>Since March 1, 2021, both the <em>Divorce Act</em> and Ontario's <em>Children's Law Reform Act</em> use new language. <strong>Decision-making responsibility</strong> means responsibility for significant decisions about a child — health, education, culture, language, religion and spirituality, and significant extracurricular activities. <strong>Parenting time</strong> means time a child spends in a parent's care. Ontario law also uses <strong>contact</strong> for time with people who aren't parents, such as grandparents. You'll still hear "custody" and "access" in everyday speech and in older documents; they are no longer the terms used in these statutes.</p>
+
+<h3>Which court?</h3>
+<p>Ontario family cases are heard in the Ontario Court of Justice, the Superior Court of Justice, or — in some locations — the Family Court branch of the Superior Court of Justice, which can hear all family issues. Divorce and property division can only be dealt with in the Superior Court. Your courthouse's Family Law Information Centre can tell you which court handles which issues where you live.</p>
+
+<!-- =============================== 3 =============================== -->
+<h2 class="chapter">3. The four core questions</h2>
+<p class="standfirst">Most separations involve four separate questions. They're connected in real life, but each has its own rules — and treating them separately makes them much easier to think about.</p>
+
+<h3>Question 1 — How will the children be cared for?</h3>
+<p>Every decision about parenting is made on one basis: <strong>the best interests of the child</strong>. The legislation tells courts to give primary consideration to the child's physical, emotional and psychological safety, security and well-being, and then to consider a list of factors, including:</p>
+<ul>
+  <li>the child's needs, given their age and stage of development;</li>
+  <li>the strength of the child's relationships with each parent and other important people;</li>
+  <li>the history of care for the child;</li>
+  <li>the child's views and preferences, given due weight according to age and maturity;</li>
+  <li>each parent's willingness to support the child's relationship with the other parent;</li>
+  <li>each person's ability to communicate and co-operate on matters affecting the child;</li>
+  <li>any family violence and its impact;</li>
+  <li>the child's cultural, linguistic, religious and spiritual upbringing, including Indigenous heritage.</li>
+</ul>
+<p>No single factor automatically decides the outcome. Both federal and Ontario law also say a child should have as much time with each parent as is consistent with the child's best interests — which is <strong>not</strong> a presumption of equal time.</p>
+
+<div class="note myth">
+  <span class="t">Common misunderstandings</span>
+  <strong>"50/50 is automatic."</strong> It isn't, although equal schedules are common. <strong>"At 12, a child decides."</strong> There is no fixed age in Ontario; a child's views are weighed according to age and maturity. <strong>"Missed child support means I can keep the children."</strong> No — support and parenting time are legally separate.
+</div>
+
+<h3>Question 2 — What child support is payable?</h3>
+<p>Child support is treated as the child's right, which is why parents generally can't simply agree to waive it. It's largely formula-based:</p>
+<ul>
+  <li><strong>The table amount.</strong> A monthly amount based on the paying parent's income and the number of children, set out in the Child Support Guidelines. The federal Department of Justice publishes an online look-up tool.</li>
+  <li><strong>Special or extraordinary expenses</strong> ("section 7 expenses") — such as some child-care, health, educational and extracurricular costs — may be shared, generally in proportion to income.</li>
+  <li><strong>Shared parenting.</strong> If each parent has the child at least 40% of the time over a year, a different calculation can apply. It doesn't automatically cancel support.</li>
+</ul>
+<p>Income is calculated using rules in the guidelines, usually starting from your tax return. In Ontario, support orders are generally enforced by the <strong>Family Responsibility Office</strong>.</p>
+
+<h3>Question 3 — Is spousal support payable?</h3>
+<p>Spousal support is very different from child support. It begins with <strong>entitlement</strong>: not every separation results in spousal support. A spouse may be entitled on a <em>compensatory</em> basis (for example, because they stepped back from a career to care for children), a <em>non-compensatory</em> basis (need), or under a contract. Only if there is entitlement do amount and duration come into play. The <strong>Spousal Support Advisory Guidelines</strong> are widely used to estimate ranges, but they are advisory, not law.</p>
+
+<h3>Question 4 — How are property and debts divided?</h3>
+<p>For <strong>married spouses</strong>, Ontario's <em>Family Law Act</em> doesn't usually divide each item. It divides the <em>growth in value</em> during the marriage through <strong>equalization</strong>:</p>
+<ol>
+  <li>Each spouse calculates their <strong>net family property</strong>: the value of what they owned on the valuation date (usually the separation date), minus their debts, minus the net value of what they brought into the marriage (with an important exception for the matrimonial home).</li>
+  <li>Some property is <strong>excluded</strong> — for example, certain gifts or inheritances received from third parties during the marriage, if properly traced.</li>
+  <li>The spouse with the higher net family property generally pays the other <strong>half the difference</strong>.</li>
+</ol>
+<p><strong>The matrimonial home</strong> has special rules. Both married spouses generally have an equal right to live in it, regardless of whose name is on title, and one spouse can't sell or mortgage it without the other's consent or a court order.</p>
+
+<div class="note alert">
+  <span class="t">Time limits</span>
+  Property claims have deadlines. A married spouse's equalization claim is generally subject to time limits measured from the date of divorce and the date of separation, and other family claims can have limits too. The rules have exceptions — if property is involved, get legal advice promptly rather than relying on a general summary.
+</div>
+
+<!-- =============================== 4 =============================== -->
+<h2 class="chapter">4. How issues get resolved</h2>
+<p class="standfirst">Court is one option among several — and usually not the first. Most separating couples resolve most issues without a judge deciding them.</p>
+
+<div class="two">
+  <div class="card avoid">
+    <h4>Negotiation</h4>
+    <p>Directly, or through lawyers. Agreements are commonly written up as a <strong>separation agreement</strong>. To be enforceable, domestic contracts in Ontario must be in writing, signed and witnessed, and independent legal advice for each person is strongly recommended.</p>
+  </div>
+  <div class="card avoid">
+    <h4>Mediation</h4>
+    <p>A neutral mediator helps you reach your own agreement. It's usually faster and less costly than court. Mediators should screen for power imbalances and family violence; mediation isn't appropriate in every case. Some subsidized family mediation is available at Ontario family courts.</p>
+  </div>
+  <div class="card avoid">
+    <h4>Collaborative family law</h4>
+    <p>Each person has a specially trained lawyer, and everyone commits to resolving issues without going to court. Other professionals — such as financial specialists — may be involved.</p>
+  </div>
+  <div class="card avoid">
+    <h4>Arbitration</h4>
+    <p>A private arbitrator makes a decision. In Ontario, family arbitration must follow specific legal requirements, including independent legal advice and screening for power imbalances, for the award to be enforceable.</p>
+  </div>
+</div>
+
+<h3>Court</h3>
+<p>Court is necessary in some situations — for example, when there are urgent safety concerns, when one person won't engage, or when agreement simply isn't possible. Even then, the court process is designed to encourage settlement at several points along the way. Section 5 explains the usual steps.</p>
+
+<div class="note">
+  <span class="t">A useful question to ask yourself</span>
+  For each issue, what would a reasonable outcome look like — and what information would I need to judge that? People who can answer that question tend to spend less time and money, whatever process they use.
+</div>
+
+<!-- =============================== 5 =============================== -->
+<h2 class="chapter">5. If you end up in court</h2>
+<p class="standfirst">Family court is a process, not a single day. Each step has a purpose. Knowing what it is makes preparation easier and the experience less overwhelming.</p>
+
+<ol class="steps">
+  <li><strong>Application and answer.</strong> One person starts the case by filing an application; the other responds with an answer. Forms are available from Ontario Court Forms.</li>
+  <li><strong>Mandatory Information Program (MIP).</strong> In many cases, both parties must attend a session about the impact of separation, the court process and alternatives to court.</li>
+  <li><strong>Financial disclosure.</strong> Where support or property is in issue, each party must serve a sworn financial statement and supporting documents. Incomplete disclosure is one of the most common reasons cases are delayed.</li>
+  <li><strong>Case conference.</strong> Usually the first meeting with a judge: to explore settlement, identify the issues, sort out disclosure and plan next steps.</li>
+  <li><strong>Motions</strong> (if needed). A request for a temporary order on a specific issue — such as a parenting schedule or support — while the case continues.</li>
+  <li><strong>Settlement conference.</strong> A conference focused on resolving the issues. The judge may give a view on the likely outcome to help the parties settle. Discussions are generally confidential.</li>
+  <li><strong>Trial management conference and trial.</strong> If issues remain, the case is prepared for trial, and a judge decides them after hearing evidence.</li>
+</ol>
+
+<p>Most cases settle before trial. You can represent yourself in Ontario family court, and many people do; even so, getting at least some legal advice is strongly recommended.</p>
+
+<div class="note">
+  <span class="t">Where to get help at the courthouse</span>
+  <strong>Family Law Information Centres (FLICs)</strong> at many Ontario family courts provide information about the process, community resources and mediation. <strong>Duty counsel</strong> — lawyers funded by Legal Aid Ontario — may be available at court to help eligible people on the day of a court appearance.
+</div>
+
+<h3>Evidence in one paragraph</h3>
+<p>Courts decide on evidence. Useful evidence is <strong>relevant</strong> (it relates to the decision being made — in parenting cases, the child's best interests) and <strong>reliable</strong> (first-hand, recorded at the time, complete and consistent). Calm, factual, dated records are more persuasive than long accounts of how frustrating the other person is. Serious allegations, including family violence, are taken seriously — their effect depends on the evidence.</p>
+
+<!-- =============================== 6 =============================== -->
+<h2 class="chapter">6. Getting legal help you can afford</h2>
+<p class="standfirst">Legal help doesn't have to mean hiring a lawyer for everything. There are more options than most people realize.</p>
+
+<table>
+  <thead><tr><th style="width:30%">Option</th><th>What it is</th></tr></thead>
+  <tbody>
+    <tr><th>Legal Aid Ontario</th><td>Free legal services for people who qualify financially, including family law certificates, duty counsel at court, and advice lines. Eligibility rules apply. <small>legalaid.on.ca</small></td></tr>
+    <tr><th>Law Society Referral Service</th><td>An online service from the Law Society of Ontario that can connect you with a lawyer or licensed paralegal for a free initial consultation of up to 30 minutes. <small>lso.ca</small></td></tr>
+    <tr><th>Limited-scope ("unbundled") services</th><td>Paying a lawyer for specific tasks only — such as advice before a conference, reviewing a draft agreement, or coaching you to represent yourself. Often far less expensive than full representation.</td></tr>
+    <tr><th>Independent legal advice (ILA)</th><td>A lawyer reviews an agreement with you before you sign it and explains your rights. Strongly recommended for separation agreements.</td></tr>
+    <tr><th>Family Law Information Centres</th><td>Free information at many family courthouses, including referrals and information about mediation.</td></tr>
+    <tr><th>Community legal clinics &amp; public legal education</th><td>Organizations such as CLEO (Community Legal Education Ontario) publish free, plain-language information through Steps to Justice. <small>stepstojustice.ca</small></td></tr>
+  </tbody>
+</table>
+
+<h3>Making a consultation count</h3>
+<p>Lawyers often charge by time. You'll get more from any consultation if you arrive with your documents organized (Section 8), a one-page timeline of key dates, and a short list of questions (Section 9). Keep your account factual; focus on what you want to understand and decide.</p>
+
+<!-- =============================== 7 =============================== -->
+<h2 class="chapter">7. Your first 30 days</h2>
+<p class="standfirst">Practical things many people find useful to consider early on. Not every item fits every family — and none of this replaces advice about your situation.</p>
+
+<div class="two">
+<div>
+<h3 style="margin-top:4pt">Safety and wellbeing</h3>
+<ul class="check">
+  <li><div>If safety is a concern, make a plan and contact support <span class="why">911 in an emergency; Assaulted Women's Helpline 1-866-863-0511 (24/7).</span></div></li>
+  <li><div>Keep the children's routines as steady as you can <span class="why">School, sleep, activities and familiar people help children through change.</span></div></li>
+  <li><div>Tell the children together if you can, and keep adult details out of it <span class="why">Children need reassurance, not information about blame or money.</span></div></li>
+  <li><div>Find support for yourself — a counsellor, your doctor, trusted friends <span class="why">Decisions made in crisis are harder to make well.</span></div></li>
+</ul>
+
+<h3>Children and parenting</h3>
+<ul class="check">
+  <li><div>Get legal information or advice before moving out or changing where the children live <span class="why">Early arrangements can influence what follows.</span></div></li>
+  <li><div>Keep communication with the other parent in writing, brief and child-focused <span class="why">Stick to logistics: dates, times, places, the children's needs.</span></div></li>
+  <li><div>Note the current care routine — who does what, when <span class="why">The history of care is a factor courts consider.</span></div></li>
+  <li><div>Don't ask the children to carry messages or choose sides</div></li>
+</ul>
+
+</div>
+<div>
+<h3 style="margin-top:4pt">Money and property</h3>
+<ul class="check">
+  <li><div>Write down the date you separated, and why you consider it the date</div></li>
+  <li><div>Make a list of assets and debts — yours, theirs and joint <span class="why">Bank and investment accounts, pensions, property, vehicles, loans, credit cards.</span></div></li>
+  <li><div>Set up a bank account in your own name for your income</div></li>
+  <li><div>Be careful with joint accounts and credit; avoid unusual withdrawals or new joint debt <span class="why">Moving or hiding assets can seriously harm your position — and your credibility.</span></div></li>
+  <li><div>Keep paying essential bills, and keep records of what you pay</div></li>
+  <li><div>Review beneficiaries, wills and powers of attorney with a lawyer <span class="why">Separation doesn't automatically change all of them.</span></div></li>
+</ul>
+
+<h3>Information and records</h3>
+<ul class="check">
+  <li><div>Start gathering the documents in Section 8 <span class="why">Financial disclosure is required if support or property is in issue.</span></div></li>
+  <li><div>Keep a simple, factual log of important events <span class="why">Dates, what happened, who was there — no commentary.</span></div></li>
+  <li><div>Change passwords on your personal accounts and devices</div></li>
+  <li><div>Think twice before posting about the separation on social media <span class="why">Assume anything you post may be read by a judge.</span></div></li>
+  <li><div>Book a consultation with a family lawyer, or explore the options in Section 6</div></li>
+</ul>
+</div>
+</div>
+
+<!-- =============================== 8 =============================== -->
+<h2 class="chapter">8. Documents to gather</h2>
+<p class="standfirst">If support or property is in issue, the Family Law Rules require financial disclosure. Gathering documents early saves time, money and stress — whatever process you use.</p>
+
+<div class="two">
+  <div>
+    <h4>Income</h4>
+    <ul class="check">
+      <li><div>Personal income tax returns — last three years, with all schedules</div></li>
+      <li><div>Notices of assessment and reassessment — last three years</div></li>
+      <li><div>Recent pay stubs, or a letter from your employer</div></li>
+      <li><div>Benefits statements (EI, CPP, disability, workers' compensation)</div></li>
+      <li><div>If self-employed: financial statements and business records</div></li>
+    </ul>
+    <h4>Assets</h4>
+    <ul class="check">
+      <li><div>Bank statements — all accounts, including joint accounts</div></li>
+      <li><div>Investment, RRSP, TFSA and RESP statements</div></li>
+      <li><div>Pension statements</div></li>
+      <li><div>Property deeds, recent valuations or tax assessments</div></li>
+      <li><div>Vehicle ownership and approximate value</div></li>
+      <li><div>Life insurance policies (cash surrender value)</div></li>
+    </ul>
+  </div>
+  <div>
+    <h4>Debts</h4>
+    <ul class="check">
+      <li><div>Mortgage statements</div></li>
+      <li><div>Lines of credit, loans and credit card statements</div></li>
+      <li><div>Tax owing or other liabilities</div></li>
+    </ul>
+    <h4>Dates and documents</h4>
+    <ul class="check">
+      <li><div>Marriage certificate (if married)</div></li>
+      <li><div>Any existing agreements — marriage contract, cohabitation agreement</div></li>
+      <li><div>Evidence of values on the date of marriage (if married)</div></li>
+      <li><div>Records showing gifts or inheritances received</div></li>
+      <li><div>Your note of the date of separation</div></li>
+    </ul>
+    <h4>The children</h4>
+    <ul class="check">
+      <li><div>School, child-care and health-care contacts</div></li>
+      <li><div>Receipts for child-care, health, education and activity costs</div></li>
+      <li><div>A simple calendar of the current care routine</div></li>
+    </ul>
+  </div>
+</div>
+<p class="small muted">Keep copies of everything, and keep originals safe. Don't take or copy another person's private documents without legal advice.</p>
+
+<!-- =============================== 9 =============================== -->
+<h2 class="chapter">9. Questions for a first consultation</h2>
+<p class="standfirst">Bring this page to your first meeting with a lawyer. Write the answers in the space provided.</p>
+
+<div class="qa"><div class="q">Based on my situation, which laws and which court would apply?</div><div class="write"></div><div class="write"></div></div>
+<div class="qa"><div class="q">What are the main issues I'll need to resolve, and which are most urgent?</div><div class="write"></div><div class="write"></div></div>
+<div class="qa"><div class="q">Are there any deadlines or time limits I need to know about?</div><div class="write"></div><div class="write"></div></div>
+<div class="qa"><div class="q">What should I do — and avoid doing — about the children's living arrangements right now?</div><div class="write"></div><div class="write"></div></div>
+<div class="qa"><div class="q">How is child support likely to be calculated in a situation like mine? Is spousal support likely to be an issue?</div><div class="write"></div><div class="write"></div></div>
+<div class="qa"><div class="q">What financial disclosure will I need, and what can I start preparing now?</div><div class="write"></div><div class="write"></div></div>
+<div class="qa"><div class="q">Which processes — negotiation, mediation, collaborative law, court — would suit my situation, and why?</div><div class="write"></div><div class="write"></div></div>
+<div class="qa"><div class="q">How do you bill, what might the next steps cost, and are limited-scope services an option?</div><div class="write"></div><div class="write"></div></div>
+<div class="qa"><div class="q">My own questions:</div><div class="write"></div><div class="write"></div><div class="write"></div></div>
+
+<!-- =============================== 10 =============================== -->
+<h2 class="chapter">10. Glossary and official resources</h2>
+<p class="standfirst">Plain-English meanings of terms you're likely to hear — and the official places to check the law for yourself.</p>
+
+<dl class="gloss">
+  <div><dt>Affidavit</dt><dd>A written statement of facts, sworn or affirmed to be true, used as evidence.</dd></div>
+  <div><dt>Applicant / respondent</dt><dd>The person who starts a court case, and the person who responds to it.</dd></div>
+  <div><dt>Best interests of the child</dt><dd>The only test for parenting decisions, focused on the child's safety, security and well-being.</dd></div>
+  <div><dt>Case conference</dt><dd>Usually the first meeting with a judge in a family case.</dd></div>
+  <div><dt>Contact</dt><dd>Under Ontario law, time a child spends with someone other than a parent, such as a grandparent.</dd></div>
+  <div><dt>Decision-making responsibility</dt><dd>Responsibility for significant decisions about a child's well-being. Replaced "custody".</dd></div>
+  <div><dt>Disclosure</dt><dd>Sharing the documents and information the other party and the court need — especially financial information.</dd></div>
+  <div><dt>Duty counsel</dt><dd>Lawyers at court, funded by Legal Aid Ontario, who can help eligible people on the day.</dd></div>
+  <div><dt>Equalization payment</dt><dd>The payment that equalizes married spouses' net family property after separation.</dd></div>
+  <div><dt>Family Responsibility Office (FRO)</dt><dd>The Ontario government office that enforces support orders.</dd></div>
+  <div><dt>Independent legal advice (ILA)</dt><dd>Advice from your own lawyer about an agreement before you sign it.</dd></div>
+  <div><dt>Matrimonial home</dt><dd>A home ordinarily occupied by married spouses as their family residence at separation. Special rules apply.</dd></div>
+  <div><dt>Motion</dt><dd>A request for a court order on a specific issue, often temporary, before the case ends.</dd></div>
+  <div><dt>Net family property (NFP)</dt><dd>The figure used to calculate equalization for married spouses.</dd></div>
+  <div><dt>Parenting plan</dt><dd>A document setting out how parents will share parenting time, decisions and communication.</dd></div>
+  <div><dt>Parenting time</dt><dd>Time a child spends in a parent's care. Replaced "access" in most contexts.</dd></div>
+  <div><dt>Separation agreement</dt><dd>A written contract between separated partners resolving issues such as parenting, support and property.</dd></div>
+  <div><dt>Settlement conference</dt><dd>A conference with a judge focused on resolving the issues before trial.</dd></div>
+  <div><dt>Section 7 expenses</dt><dd>Special or extraordinary child expenses shared in addition to table child support.</dd></div>
+  <div><dt>Table amount</dt><dd>The base child support amount from the guidelines, based on income and number of children.</dd></div>
+</dl>
+
+<h3 style="margin-top:18pt">Official and trusted resources</h3>
+<ul class="src">
+  <li><span class="l">Family law services — Government of Ontario</span><br /><span class="u">ontario.ca/page/family-law-services</span></li>
+  <li><span class="l">Ontario statutes and regulations (e-Laws) — Children's Law Reform Act, Family Law Act, Family Law Rules, Child Support Guidelines</span><br /><span class="u">ontario.ca/laws</span></li>
+  <li><span class="l">Divorce Act and Federal Child Support Guidelines — Justice Laws Website</span><br /><span class="u">laws-lois.justice.gc.ca</span></li>
+  <li><span class="l">Family law information and child support look-up — Department of Justice Canada</span><br /><span class="u">justice.gc.ca/eng/fl-df</span></li>
+  <li><span class="l">Family Law Rules forms — Ontario Court Forms</span><br /><span class="u">ontariocourtforms.on.ca</span></li>
+  <li><span class="l">Office of the Children's Lawyer — Government of Ontario</span><br /><span class="u">ontario.ca/page/office-childrens-lawyer</span></li>
+  <li><span class="l">Legal Aid Ontario</span><br /><span class="u">legalaid.on.ca</span></li>
+  <li><span class="l">Finding a lawyer or paralegal — Law Society of Ontario</span><br /><span class="u">lso.ca</span></li>
+  <li><span class="l">Steps to Justice — CLEO</span><br /><span class="u">stepstojustice.ca</span></li>
+</ul>
+
+<!-- =============================== BACK =============================== -->
+<section class="back">
+  <svg viewBox="0 0 24 24" fill="none" stroke-linecap="round" style="width:34pt;height:34pt" aria-hidden="true">
+    <path d="M3 18 H 10 C 13 18, 14 10, 21 7" stroke="#182B30" stroke-width="1.4" />
+    <path d="M10 18 C 13 18, 15 15, 21 15" stroke="#C4AC8A" stroke-width="1.4" />
+  </svg>
+  <h2 style="margin-top:22pt">You cannot control every part of separation. But you can better understand the process, the evidence, and the decisions ahead.</h2>
+  <p style="margin-top:22pt"><strong>Keep going at neverafter.ca</strong> — free plain-English explainers on parenting time, child support, the Office of the Children's Lawyer, settlement conferences and evidence; the <em>Find Your Starting Point</em> and <em>Relevant or Not?</em> tools; and Parenting Plan Studio, for organizing a clear parenting proposal.</p>
+  <p><strong>The Never After Brief</strong> — clear explanations, useful resources, less noise. Subscribe at neverafter.ca.</p>
+  <div class="bottom">
+    <strong style="color:#182B30">About this guide.</strong> The Ontario Separation Starter Guide, free edition. Written by the Never After Editorial Team. Current to November 2026. This edition has been editorially reviewed against official sources; it has not yet been reviewed by an Ontario family-law professional, and will be updated when that review is complete.<br /><br />
+    Never After provides general legal information and educational resources. It is not a law firm and does not provide legal advice or representation. Reading this guide does not create a lawyer–client relationship. If you or a child are in immediate danger, call 911.<br /><br />
+    © 2026 Never After. You may print and share this guide for personal, non-commercial use, unaltered.
+  </div>
+</section>
+
+</body>
+</html>

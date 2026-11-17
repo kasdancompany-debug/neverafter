@@ -3,6 +3,7 @@ import Link from "next/link";
 import { PageHeader } from "@/components/PageHeader";
 import { ProductCover } from "@/components/ProductCover";
 import { SignupForm } from "@/components/SignupForm";
+import { GuideDownload } from "@/components/GuideDownload";
 import { SourceList } from "@/components/SourceList";
 import { NewsletterBand } from "@/components/NewsletterBand";
 import { formatCad, products } from "@/lib/products";
@@ -75,11 +76,17 @@ export default function ResourcesPage() {
               Ontario Separation Starter Guide — free edition
             </h2>
             <p className="mt-3 leading-relaxed text-charcoal/80">
-              The essentials: separation vs. divorce, federal vs. Ontario law, the four core issues, and questions to bring
-              to a first consultation.
+              16 printable pages: which law applies to you, the four core issues, a first-30-days checklist, a
+              documents worksheet, questions for a first consultation, affordable legal help and a glossary.
             </p>
+            <GuideDownload className="mt-6" />
           </div>
-          <SignupForm list="starter-guide" cta="Send me the guide" />
+          <div>
+            <p className="text-[0.88rem] text-charcoal/80">Want new guides when they&apos;re published?</p>
+            <div className="mt-3">
+              <SignupForm list="newsletter" cta="Subscribe" />
+            </div>
+          </div>
         </div>
       </section>
 
