@@ -85,7 +85,7 @@ export function Header({ searchIndex }: { searchIndex: SearchItem[] }) {
       >
         <div className="container-x flex h-16 items-center">
           <div className="shrink-0">
-            <Logo />
+            <Logo priority />
           </div>
 
           <nav aria-label="Primary" className="ml-10 hidden h-full xl:block">

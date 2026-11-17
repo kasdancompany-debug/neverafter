@@ -1,6 +1,12 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
-  <rect width="64" height="64" rx="14" fill="#182B30"/>
-  <path d="M12 50 C 20 44, 26 38, 32 32 C 38 26, 44 18, 54 14" fill="none" stroke="#F5F1E9" stroke-width="3" stroke-linecap="round"/>
-  <path d="M32 32 C 40 30, 46 30, 54 26" fill="none" stroke="#C4AC8A" stroke-width="3" stroke-linecap="round"/>
-  <circle cx="32" cy="32" r="3.2" fill="#C4AC8A"/>
+  <rect width="64" height="64" rx="14" fill="#FAF9F6"/>
+  <g transform="translate(32 33) scale(1.12) translate(-32 -36)">
+  <!-- sun -->
+  <path d="M17 35 A15 15 0 0 1 47 35" fill="none" stroke="#C2953F" stroke-width="4.8" stroke-linecap="round"/>
+  <!-- horizon -->
+  <path d="M5 39 Q20 35.2 30 35.6" fill="none" stroke="#3E6468" stroke-width="3.6" stroke-linecap="round"/>
+  <path d="M40 35.8 Q50 36.2 59 39" fill="none" stroke="#3E6468" stroke-width="3.6" stroke-linecap="round"/>
+  <!-- road -->
+  <path d="M30 35.4 C 40 35.6, 44 38.5, 37 42 C 31 45, 22 47.5, 15 53 L 25 53 C 31 49, 41 46.5, 45.5 42.5 C 50 38.5, 44 35.6, 36 35.4 Z" fill="#5E8A8C"/>
+  </g>
 </svg>

@@ -22,7 +22,7 @@ export function ProductCover({ product, className = "", compact = false }: { pro
           <div className="mt-auto flex items-end justify-between">
             <span className="text-[0.55rem] uppercase tracking-[0.16em] opacity-70">Educational guide</span>
             <span style={{ color: accent }}>
-              <LogoMark className="h-7 w-7" />
+              <LogoMark className="h-6 w-9" />
             </span>
           </div>
         </div>

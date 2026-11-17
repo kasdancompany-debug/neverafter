@@ -9,7 +9,7 @@ export function Footer() {
       <div className="container-x pb-10 pt-16">
         <div className="grid gap-12 lg:grid-cols-[1fr_2fr]">
           <div>
-            <Logo tone="light" />
+            <Logo tone="light" height={64} />
             <p className="mt-5 max-w-xs font-serif text-[1.35rem] leading-snug text-paper/90">
               The fairytale ends. Life doesn&apos;t.
             </p>

@@ -1,10 +1,13 @@
 import { ImageResponse } from "next/og";
+import { LOGO_RATIO, logoDataUrl } from "@/lib/brand-assets";
 
 export const alt = "Never After — The fairytale ends. Life doesn't.";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
-export default function OgImage() {
+export default async function OgImage() {
+  const logo = await logoDataUrl("light");
+  const h = 150;
   return new ImageResponse(
     (
       <div
@@ -17,18 +20,16 @@ export default function OgImage() {
           background: "#182B30",
           color: "#F5F1E9",
           padding: 72,
-          fontFamily: "serif",
         }}
       >
-        <div style={{ display: "flex", fontSize: 30, letterSpacing: 4 }}>
-          NEVER AFTER<span style={{ color: "#C4AC8A" }}>.</span>
-        </div>
-        <div style={{ display: "flex", flexDirection: "column", fontSize: 92, lineHeight: 1 }}>
+        {/* eslint-disable-next-line @next/next/no-img-element */}
+        <img src={logo} alt="" width={Math.round(h * LOGO_RATIO)} height={h} />
+        <div style={{ display: "flex", flexDirection: "column", fontSize: 76, lineHeight: 1.05, fontFamily: "serif" }}>
           <span>The fairytale ends.</span>
-          <span style={{ color: "#C4AC8A", fontStyle: "italic" }}>Life doesn&apos;t.</span>
+          <span style={{ color: "#C4AC8A" }}>Life doesn&apos;t.</span>
         </div>
         <div style={{ display: "flex", fontSize: 26, color: "rgba(245,241,233,0.7)", fontFamily: "sans-serif" }}>
-          Divorce, Separation & Family Law — Explained. Ontario, Canada.
+          Divorce, separation & family law — explained. Ontario, Canada.
         </div>
       </div>
     ),
